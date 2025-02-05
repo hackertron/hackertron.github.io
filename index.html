@@ -1,266 +1,1192 @@
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jay's Zone</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="icon" href="images/favicon.ico">
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="home.html" class="logo"><strong>Welcome to</strong> <span>Jay's Zone</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="home.html">Home</a></li>
-							<li><a href="work.html">Projects</a></li>
-							<li><a href="games.html">Game Projects</a></li>
-							<li><a href="resume.html">Resume</a></li>
-						</ul>
-						<ul class="actions vertical">
-							<li><a href="http://github.com/hackertron/" class="button special fit" target="_blank">View on Github</a></li>
-							<li><a href="http://cryptowriteup.worpress.com/" class="button fit">Blog</a></li>
-						</ul>
-					</nav>
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, there i am Jayssj11</h1>
-							</header>
-							<div class="content">
-								<p>My real name is Jayaditya Gupta<br />
-								and i make web apps , desktop apps and play CTF's and online security challenges</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Get Started</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
 
-				<!-- Main -->
-					<div id="main">
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work.html#wtl" class="link">WikiToLearn desktop client</a></h3>
-										<p>A cross-platform Qt application for offline browsing of wikitolearn</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work.html#CryptSteg" class="link">CryptSteg</a></h3>
-										<p>A kind of CTF mainly focused on Cryptography & Steganography</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work.html#ambot" class="link">Ambot</a></h3>
-										<p>A bot made to answer FAQ of amity university.</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work.html#OWASP_DEMO" class="link">OWASP_Demo</a></h3>
-										<p>just a bunch of vulnerable web pages for demo of OWASP top 10</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/hackertron/To_do_app" class="link" target="_blank">To_do_app</a></h3>
-										<p>A very simple to-do app in PHP</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="https://github.com/hackertron/random/blob/master/mines" class="link" target="_blank">Mines</a></h3>
-										<p>A minesweeper playing script in AutoIT3</p>
-									</header>
-								</article>
-							</section>
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>Skills</h2>
-									</header>
-								<div class="skillbar clearfix " data-percent="30%">
-									<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
-									<div class="skillbar-bar" style="background: #e67e22;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">30%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
 
-								<div class="skillbar clearfix " data-percent="35%">
-									<div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
-									<div class="skillbar-bar" style="background: #3498db;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">35%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
 
-								<div class="skillbar clearfix " data-percent="50%">
-									<div class="skillbar-title" style="background: #2c3e50;"><span>javascript</span></div>
-									<div class="skillbar-bar" style="background: #2c3e50;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">50%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
 
-								<div class="skillbar clearfix " data-percent="100%">
-									<div class="skillbar-title" style="background: #46465e;"><span>PHP Native</span></div>
-									<div class="skillbar-bar" style="background: #5a68a5;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">100%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
 
-								<div class="skillbar clearfix " data-percent="75%">
-									<div class="skillbar-title" style="background: #333333;"><span>C/C++</span></div>
-									<div class="skillbar-bar" style="background: #525252;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">75%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
 
-								<div class="skillbar clearfix " data-percent="70%">
-									<div class="skillbar-title" style="background: #27ae60;"><span>Python</span></div>
-									<div class="skillbar-bar" style="background: #2ecc71;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">70%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
 
-								<div class="skillbar clearfix " data-percent="80%">
-									<div class="skillbar-title" style="background: #124e8c;"><span>Qt/QML
-									</span></div>
-									<div class="skillbar-bar" style="background: #4288d0;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">80%</p></strong></div>
-								</div> <!-- End Skill Bar -->
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
 
-								<div class="skillbar clearfix " data-percent="60%">
-									<div class="skillbar-title" style="background: #a2a4a5;"><span>Auto IT
-									</span></div>
-									<div class="skillbar-bar" style="background: #6f6f70;"></div>
-									<div class="skill-bar-percent"><strong><p style="color:black;">60%</p></strong></div>
-								</div> <!-- End Skill Bar -->
-								
-							</div>
-							</section>
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
 
-					</div>
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto:jayadityagupta11@gmail.com">jayadityagupta11@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(+91) 954-0966-271</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Delhi, New Delhi 110092<br />
-										India</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
 
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="https://twitter.com/jayssj1" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="https://www.facebook.com/cooljay.gupta" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/jay_gupta11/" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="http://github.com/hackertron/" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="https://in.linkedin.com/in/jayaditya-gupta-a56454129" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Jayssj11</li><li>2018</li>
-							</ul>
-						</div>
-					</footer>
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-			</div>
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
 
-			<script src="assets/js/index.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
 
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
 
-	</body>
-</html>
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="8ea6d6c3-881e-4691-8bbe-5d4134e1d2ff" data-section-id="8ea6d6c3-881e-4691-8bbe-5d4134e1d2ff">
+
+<htmlCode>
+<div id="root">
+  <nav id="navbar" class="fixed w-full z-50 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="text-xl font-bold">Jayaditya Gupta</a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="#hero" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="#about" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+            <a href="#experience" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+            <a href="#skills" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+            <a href="#projects" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+            <a href="#publications" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Publications</a>
+            <a href="#achievements" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Achievements</a>
+            <a href="#contact" class="hover:bg-neutral-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-neutral-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-800">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Home</a>
+        <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">About</a>
+        <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Experience</a>
+        <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Skills</a>
+        <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Projects</a>
+        <a href="#publications" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Publications</a>
+        <a href="#achievements" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Achievements</a>
+        <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu when clicking a link
+    const mobileLinks = mobileMenu.getElementsByTagName('a');
+    for (const link of mobileLinks) {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    }
+
+    // Add smooth scrolling to all links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="94942c68-2094-4b00-85b1-a281a0ed9e04" data-section-id="94942c68-2094-4b00-85b1-a281a0ed9e04">
+
+<htmlCode>
+<div id="hero" class="min-h-screen bg-neutral-900 text-white pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center min-h-[70vh]">
+    <div class="animate__animated animate__fadeIn">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        Jayaditya Gupta
+        <span class="block text-2xl md:text-3xl text-neutral-400 mt-2">
+          Blockchain & back-end Engineer
+        </span>
+      </h1>
+      
+      <div class="mt-6 space-y-4 max-w-3xl animate__animated animate__fadeInUp animate__delay-1s">
+        <p class="text-xl text-neutral-300">
+          🚀 Passionate about backend, scaling, cryptography, blockchain, and developer engagement, specializing in building secure, decentralized solutions and fostering developer communities.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 text-sm">
+          <span class="px-4 py-2 bg-neutral-800 rounded-full">Ethereum</span>
+          <span class="px-4 py-2 bg-neutral-800 rounded-full">Zero-Knowledge Proofs</span>
+          <span class="px-4 py-2 bg-neutral-800 rounded-full">Backend dev</span>
+          <span class="px-4 py-2 bg-neutral-800 rounded-full">Physics</span>
+        </div>
+      </div>
+
+      <div class="mt-10 flex gap-4 animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+          Contact Me
+        </a>
+        <a href="#experience" class="border border-neutral-600 hover:border-neutral-400 px-6 py-3 rounded-lg font-medium transition-colors">
+          View Experience
+        </a>
+      </div>
+
+      <div class="mt-12 flex gap-6 text-neutral-400 animate__animated animate__fadeInUp animate__delay-2s">
+        <a href="https://github.com/hackertron" target="_blank" class="hover:text-white transition-colors">
+          <i class="fab fa-github text-2xl"></i>
+        </a>
+        <a href="https://in.linkedin.com/in/jayaditya-gupta-a56454129" target="_blank" class="hover:text-white transition-colors">
+          <i class="fab fa-linkedin text-2xl"></i>
+        </a>
+        <a href="https://twitter.com/jayssj1" target="_blank" class="hover:text-white transition-colors">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="mailto:jayadityagupta11@gmail.com" class="hover:text-white transition-colors">
+          <i class="fas fa-envelope text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate__animated animate__bounce animate__infinite">
+    <a href="#about" class="text-neutral-400 hover:text-white transition-colors">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+  </div>
+</div>
+</htmlCode></element><element id="539beaa8-5d9b-44b2-8397-0d4d0e0f2591" data-section-id="539beaa8-5d9b-44b2-8397-0d4d0e0f2591">
+
+<htmlCode>
+<div id="root">
+  <section id="about" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold text-neutral-900">About Me</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="animate__animated animate__fadeInLeft">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Education</h3>
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="font-bold">Masters in Computer Application (MCA)</h4>
+              <p class="text-neutral-600">Indraprastha University, New Delhi (2019)</p>
+              <p class="text-blue-600">CGPA: 8.19/10.0</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <h4 class="font-bold">BSc in Information Technology</h4>
+              <p class="text-neutral-600">Amity University, Noida (2017)</p>
+              <p class="text-blue-600">CGPA: 8.33/10.0</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate__animated animate__fadeInRight">
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6">Why Work With Me?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✅</span>
+                <span><strong>Blockchain Expertise</strong> – Deep understanding of Ethereum, zk-SNARKs and scalable backend development.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✅</span>
+                <span><strong>Proven Developer Advocate</strong> – Public speaker, GSOC mentor, and community builder</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✅</span>
+                <span><strong>Open Source Contributor</strong> – Contributed to KDE, Qt, The Linux Foundation, and CERN</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✅</span>
+                <span><strong>Security & Cryptography-Focused</strong> – Worked on TLSNotary, zk-SNARKs, zkTLS</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-2">✅</span>
+                <span><strong>Global Experience</strong> – Worked with Ethereum Foundation, CERN, KDE, QT, GSOC</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center animate__animated animate__fadeInUp">
+        <p class="text-lg text-neutral-700 max-w-3xl mx-auto">
+          🚀 Passionate about cryptography, blockchain, and developer engagement, I specialize in building secure backends, minimalistic react frontend and fostering developer communities. With extensive experience in cloud, Ethereum, python , I create educational content, contribute to open-source projects, and speak at global conferences.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="a21b8fe0-0cd9-4908-a2d8-da2fedea4427" data-section-id="a21b8fe0-0cd9-4908-a2d8-da2fedea4427">
+
+<htmlCode>
+<div id="root">
+  <section id="experience" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold">Professional Experience</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute top-0 bottom-0 left-1/2 w-0.5 bg-blue-600 transform -translate-x-1/2"></div>
+        
+        <div class="space-y-16">
+          <!-- Ethereum Foundation -->
+          <div class="relative animate__animated animate__fadeInLeft">
+            <div class="bg-neutral-800 p-8 rounded-lg shadow-xl ml-6 md:ml-0 md:mr-[50%] md:pr-16">
+              <div class="absolute right-0 md:left-[100%] top-6 w-6 h-6 bg-blue-600 rounded-full transform translate-x-3 flex items-center justify-center">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              <h3 class="text-xl font-bold text-blue-500">Ethereum Foundation</h3>
+              <p class="text-neutral-400">Software Engineer – Applied Cryptographer | Jan 2023 – Present</p>
+              <div class="mt-4 space-y-3">
+                <p>• Designed and implemented LLM-powered workflows for TLSNotary WASM plugins</p>
+                <p>• Developer Relations Lead for Anon Aadhaar ZKP</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Solidity</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Ethereum</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">MPC</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">zk-SNARKs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CERN -->
+          <div class="relative animate__animated animate__fadeInRight">
+            <div class="bg-neutral-800 p-8 rounded-lg shadow-xl mr-6 md:mr-0 md:ml-[50%] md:pl-16">
+              <div class="absolute left-0 md:right-[100%] top-6 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-3 flex items-center justify-center">
+                <div class="w-3 h-3 bg-white rounded-full"></div>
+              </div>
+              <h3 class="text-xl font-bold text-blue-500">CERN</h3>
+              <p class="text-neutral-400">Software Engineer | Mar 2020 – Feb 2023</p>
+              <div class="mt-4 space-y-3">
+                <p>• Developed high-availability infrastructure for CERN Cloud (200+ nodes)</p>
+                <p>• Built migration cycle tool for automated system management</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Python</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">OpenStack</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Docker</span>
+                  <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Puppet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Earlier Experience Button -->
+          <div class="text-center relative z-10 animate__animated animate__fadeIn">
+            <button id="showMoreExp" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">
+              Show Earlier Experience
+            </button>
+          </div>
+
+          <!-- Earlier Experience Section (Hidden by Default) -->
+          <div id="earlierExp" class="hidden space-y-16">
+            <!-- Additional experience entries here -->
+            <div class="relative animate__animated animate__fadeInLeft">
+              <div class="bg-neutral-800 p-8 rounded-lg shadow-xl ml-6 md:ml-0 md:mr-[50%] md:pr-16">
+                <div class="absolute right-0 md:left-[100%] top-6 w-6 h-6 bg-blue-600 rounded-full transform translate-x-3 flex items-center justify-center">
+                  <div class="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+                <h3 class="text-xl font-bold text-blue-500">CERN</h3>
+                <p class="text-neutral-400">Software Developer Intern | June 2019 – Aug 2019</p>
+                <div class="mt-4 space-y-3">
+                  <p>• Developed tools to benchmark database tech supported by NGA for CERN ICS</p>
+                  <p>• Tools allowed any number of backend to be tested on read and write performances.</p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">C++</span>
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Qt</span>
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">InfluxDb, OracleDB</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative animate__animated animate__fadeInRight">
+              <div class="bg-neutral-800 p-8 rounded-lg shadow-xl mr-6 md:mr-0 md:ml-[50%] md:pl-16">
+                <div class="absolute left-0 md:right-[100%] top-6 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-3 flex items-center justify-center">
+                  <div class="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+                <h3 class="text-xl font-bold text-blue-500">The Linux Foundation</h3>
+                <p class="text-neutral-400">Software Engineer | May 2018 – Aug 2018</p>
+                <div class="mt-4 space-y-3">
+                  <p>• Deployed 20+ OpenSUSE packages to IBM S390x architecture</p>
+                  <p>• Contributed to OpenSUSE security repositories</p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">Python</span>
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">RPM</span>
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">OpenBuilService</span>
+                    <span class="px-3 py-1 bg-neutral-700 rounded-full text-sm">C++</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('showMoreExp').addEventListener('click', function() {
+      const earlierExp = document.getElementById('earlierExp');
+      const button = document.getElementById('showMoreExp');
+      
+      if (earlierExp.classList.contains('hidden')) {
+        earlierExp.classList.remove('hidden');
+        button.textContent = 'Show Less';
+        earlierExp.classList.add('animate__animated', 'animate__fadeIn');
+      } else {
+        earlierExp.classList.add('hidden');
+        button.textContent = 'Show Earlier Experience';
+        earlierExp.classList.remove('animate__animated', 'animate__fadeIn');
+      }
+    });
+  </script>
+</div>
+</htmlCode></element><element id="a8552a5f-9698-4fee-bdc2-ac11008889e1" data-section-id="a8552a5f-9698-4fee-bdc2-ac11008889e1">
+
+<htmlCode>
+<div id="root">
+  <section id="skills" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold text-neutral-900">Technical Skills</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Programming Languages -->
+        <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp">
+          <div class="text-2xl mb-4">🔤</div>
+          <h3 class="text-xl font-bold mb-4 text-neutral-900">Programming Languages</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">C++14</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Python</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Golang</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Rust</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">JavaScript</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Bash</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- Blockchain & Cryptography -->
+        <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="text-2xl mb-4">🔒</div>
+          <h3 class="text-xl font-bold mb-4 text-neutral-900">Blockchain & Cryptography</h3>
+          <div class="space-y-2">
+            <p class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Solidity, Smart Contracts, EVM</p>
+            <p class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>zk-SNARKs</p>
+            <p class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Smart Contract Development</p>
+          </div>
+        </div>
+
+        <!-- Development Tools -->
+        <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="text-2xl mb-4">🛠️</div>
+          <h3 class="text-xl font-bold mb-4 text-neutral-900">Development Tools</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">CI/CD</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Git</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Docker</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Puppet</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">Unreal Engine</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-3s">
+          <div class="text-2xl mb-4">💾</div>
+          <h3 class="text-xl font-bold mb-4 text-neutral-900">Databases</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">SQLite</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">MySQL</span>
+            <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeInUp animate__delay-4s">
+          <div class="text-2xl mb-4">📜</div>
+          <h3 class="text-xl font-bold mb-4 text-neutral-900">Certifications</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Algorithmic Toolbox – UC San Diego</li>
+            <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>Data Structures – UC San Diego</li>
+            <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>CCNA Discovery – Cisco</li>
+            <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>AWS Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="e7d785f0-e62c-4c71-bdf3-0cef21e94472" data-section-id="e7d785f0-e62c-4c71-bdf3-0cef21e94472">
+
+<htmlCode>
+<div id="root">
+  <section id="projects" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold">Projects & Publications</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- TLSNotary Plugin -->
+        <div class="group bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeInUp">
+          <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="https://ethereum.org/images/solidity-banner.png" alt="Blockchain Project" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"/>
+          </div>
+          <h3 class="text-xl font-bold mb-3">TLSNotary Plugin Autogeneration</h3>
+          <p class="text-neutral-400 mb-4">Automated TLSNotary WASM plugin generation using LLM agents for dynamic website integration.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">WASM</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">LLM</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">TLSNotary</span>
+          </div>
+          <button class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+
+        <!-- Anon Aadhaar ZKP -->
+        <div class="group bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+          <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="https://images.mirror-media.xyz/publication-images/zvPrnf-4dVybNSEImBYxq.jpeg" alt="ZKP Project" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"/>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Anon Aadhaar ZKP</h3>
+          <p class="text-neutral-400 mb-4">Privacy-preserving identity verification system using zk-SNARKs for Indian citizens.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">zk-SNARKs</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">Privacy</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">Identity</span>
+          </div>
+          <button class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+
+        <!-- CERN Migration Tool -->
+        <div class="group bg-neutral-800 rounded-lg p-6 hover:bg-neutral-700 transition-all duration-300 animate__animated animate__fadeInUp animate__delay-2s">
+          <div class="relative overflow-hidden rounded-lg mb-6">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/CERN_logo.svg/1200px-CERN_logo.svg.png" alt="Cloud Infrastructure" class="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"/>
+          </div>
+          <h3 class="text-xl font-bold mb-3">CERN Migration Tool</h3>
+          <p class="text-neutral-400 mb-4">Automated bulk live migrations tool for cloud infrastructure management and optimization.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">Cloud</span>
+            <span class="px-3 py-1 bg-neutral-900 rounded-full text-sm">Automation</span>
+          </div>
+          <button class="text-blue-400 hover:text-blue-300 transition-colors flex items-center">
+            <a href="https://gitlab.cern.ch/cloud-infrastructure/migration_cycle">Learn more <i class="fas fa-arrow-right ml-2"></i></a>
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-12 animate__animated animate__fadeIn">
+        <a href="https://github.com/hackertron" target="_blank" class="inline-flex items-center px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-lg transition-colors">
+          <i class="fab fa-github mr-2"></i>
+          View More on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.group').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.classList.add('animate__pulse');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.classList.remove('animate__pulse');
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="8bbed53b-e6a1-4016-93ec-5cb0d3e7cb40" data-section-id="8bbed53b-e6a1-4016-93ec-5cb0d3e7cb40">
+
+<htmlCode>
+<div id="root">
+  <section id="publications" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold text-neutral-900">Conference Talks & Publications</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Conference Talks -->
+        <div class="bg-white rounded-xl shadow-lg p-8 animate__animated animate__fadeInLeft">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Conference Presentations</h3>
+          
+          <div class="space-y-6">
+            <div class="border-l-4 border-blue-500 pl-4">
+              <div class="flex items-center mb-2">
+                <img src="https://consensus-hongkong2025.coindesk.com/site/consensushongkong202/images/userfiles/metadata/hk-25/HK25-Generic.png" alt="Conference" class="w-12 h-12 rounded object-cover mr-4"/>
+                <h4 class="text-lg font-semibold">HEPiX Spring 2022</h4>
+              </div>
+              <p class="text-neutral-600">Security Infrastructure and Cloud Systems at CERN</p>
+              <p class="text-sm text-neutral-500 mt-2">CERN, Switzerland</p>
+            </div>
+
+            <div class="border-l-4 border-blue-500 pl-4">
+              <div class="flex items-center mb-2">
+                <img src="https://ethereum.org/images/vitalik-blog-banner.svg" alt="Conference" class="w-12 h-12 rounded object-cover mr-4"/>
+                <h4 class="text-lg font-semibold">O3DECon 2021</h4>
+              </div>
+              <p class="text-neutral-600">Open-source Game Development and Blockchain Integration</p>
+              <p class="text-sm text-neutral-500 mt-2">Virtual Conference</p>
+            </div>
+
+            <div class="border-l-4 border-blue-500 pl-4">
+              <div class="flex items-center mb-2">
+                <img src="https://ethpandaops.io/posts/contributoor-beacon-node-companion/featured.png" alt="Conference" class="w-12 h-12 rounded object-cover mr-4"/>
+                <h4 class="text-lg font-semibold">OSIG 2019</h4>
+              </div>
+              <p class="text-neutral-600">Security in Decentralized Systems</p>
+              <p class="text-sm text-neutral-500 mt-2">Virtual Conference</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Publications -->
+        <div class="bg-white rounded-xl shadow-lg p-8 animate__animated animate__fadeInRight">
+          <h3 class="text-2xl font-bold text-neutral-900 mb-6">Technical Publications</h3>
+          
+          <div class="space-y-8">
+            <div class="group hover:bg-neutral-50 p-4 rounded-lg transition-colors cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="text-lg font-semibold group-hover:text-blue-600 transition-colors">TLSNotary Plugin Framework</h4>
+                <span class="text-sm text-neutral-500">2023</span>
+              </div>
+              <p class="text-neutral-600">Dynamic WASM plugin generation for website verification using LLM agents</p>
+              <div class="flex gap-2 mt-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">WASM</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">LLM</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Security</span>
+              </div>
+            </div>
+
+            <div class="group hover:bg-neutral-50 p-4 rounded-lg transition-colors cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="text-lg font-semibold group-hover:text-blue-600 transition-colors">Anon Aadhaar: Privacy-Preserving Identity</h4>
+                <span class="text-sm text-neutral-500">2023</span>
+              </div>
+              <p class="text-neutral-600">Zero-knowledge proof system for Indian identity verification</p>
+              <div class="flex gap-2 mt-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">ZKP</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Privacy</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Identity</span>
+              </div>
+            </div>
+
+            <div class="group hover:bg-neutral-50 p-4 rounded-lg transition-colors cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <h4 class="text-lg font-semibold group-hover:text-blue-600 transition-colors">CERN Cloud Infrastructure Management</h4>
+                <span class="text-sm text-neutral-500">2022</span>
+              </div>
+              <p class="text-neutral-600">Automated migration and management system for large-scale cloud infrastructure</p>
+              <div class="flex gap-2 mt-3">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Cloud</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Automation</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">DevOps</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="73f01b78-4b50-44b9-afe9-1c66ca6264aa" data-section-id="73f01b78-4b50-44b9-afe9-1c66ca6264aa">
+
+<htmlCode>
+<div id="root">
+  <section id="achievements" class="py-20 bg-neutral-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold">Achievements & Contributions</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Public Speaking & Community Engagement -->
+        <div class="animate__animated animate__fadeInLeft">
+          <div class="bg-neutral-800 rounded-xl p-8 h-full">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-microphone text-3xl text-blue-500 mr-4"></i>
+              <h3 class="text-2xl font-bold">Public Speaking & Community</h3>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="group hover:bg-neutral-700 p-4 rounded-lg transition-all">
+                <h4 class="font-semibold text-blue-400">HEPiX Spring 2022 Speaker</h4>
+                <p class="text-neutral-400">Security infrastructure and cloud systems at CERN</p>
+              </div>
+
+              <div class="group hover:bg-neutral-700 p-4 rounded-lg transition-all">
+                <h4 class="font-semibold text-blue-400">O3DECon 2021 Speaker</h4>
+                <p class="text-neutral-400">Open-source game development and blockchain integration</p>
+              </div>
+
+              <div class="group hover:bg-neutral-700 p-4 rounded-lg transition-all">
+                <h4 class="font-semibold text-blue-400">OSIG 2019 Speaker</h4>
+                <p class="text-neutral-400">Security in decentralized systems</p>
+              </div>
+
+              <div class="group hover:bg-neutral-700 p-4 rounded-lg transition-all">
+                <h4 class="font-semibold text-blue-400">Google Code-In Mentor</h4>
+                <p class="text-neutral-400">Mentored young developers (2016 & 2018)</p>
+              </div>
+
+              <div class="group hover:bg-neutral-700 p-4 rounded-lg transition-all">
+                <h4 class="font-semibold text-blue-400">GSOC Mentor – KDE (2019)</h4>
+                <p class="text-neutral-400">Guided developers in open-source contributions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competitive Programming & CTFs -->
+        <div class="animate__animated animate__fadeInRight">
+          <div class="bg-neutral-800 rounded-xl p-8 h-full">
+            <div class="flex items-center mb-6">
+              <i class="fas fa-trophy text-3xl text-blue-500 mr-4"></i>
+              <h3 class="text-2xl font-bold">Competitive Programming</h3>
+            </div>
+
+            <div class="space-y-8">
+              <div class="relative">
+                <div class="flex items-center">
+                  <div class="w-16 h-16 bg-neutral-700 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold">283</span>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-blue-400">Google CTF 2017</h4>
+                    <p class="text-neutral-400">Global Ranking (Team: d4rkr00t)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="flex items-center">
+                  <div class="w-16 h-16 bg-neutral-700 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold">34</span>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-blue-400">Hackcon CTF</h4>
+                    <p class="text-neutral-400">Team Ranking (Team: d4rkr00t)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative">
+                <div class="flex items-center">
+                  <div class="w-16 h-16 bg-neutral-700 rounded-full flex items-center justify-center">
+                    <span class="text-2xl font-bold">3rd</span>
+                  </div>
+                  <div class="ml-4">
+                    <h4 class="font-semibold text-blue-400">CCFIS Hackers Cup</h4>
+                    <p class="text-neutral-400">CTF Competition Placement</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.group').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.classList.add('animate__animated', 'animate__pulse');
+      });
+      item.addEventListener('mouseleave', () => {
+        item.classList.remove('animate__animated', 'animate__pulse');
+      });
+    });
+  </script>
+</div>
+</htmlCode></element><element id="390c313a-b603-40c5-bc6a-887e3f8d7f35" data-section-id="390c313a-b603-40c5-bc6a-887e3f8d7f35">
+
+<htmlCode>
+<div id="root">
+  <section id="contact" class="py-20 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 animate__animated animate__fadeIn">
+        <h2 class="text-4xl font-bold text-neutral-900">Get In Touch</h2>
+        <div class="mt-2 h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="animate__animated animate__fadeInLeft">
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6">Connect With Me</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-envelope text-blue-600"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-neutral-500">Email</p>
+                  <a href="mailto:jayadityagupta11@gmail.com" class="text-blue-600 hover:text-blue-700">jayadityagupta11@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i class="fab fa-github text-blue-600"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-neutral-500">GitHub</p>
+                  <a href="https://github.com/hackertron" target="_blank" class="text-blue-600 hover:text-blue-700">@hackertron</a>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i class="fab fa-linkedin text-blue-600"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-neutral-500">LinkedIn</p>
+                  <a href="https://in.linkedin.com/in/jayaditya-gupta-a56454129" target="_blank" class="text-blue-600 hover:text-blue-700">Jayaditya Gupta</a>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i class="fab fa-twitter text-blue-600"></i>
+                </div>
+                <div class="ml-4">
+                  <p class="text-sm text-neutral-500">Twitter</p>
+                  <a href="https://twitter.com/jayssj1" target="_blank" class="text-blue-600 hover:text-blue-700">@jayssj1</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="animate__animated animate__fadeInRight">
+          <form class="bg-white rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-6">Send a Message</h3>
+            
+            <div class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-neutral-700">Name</label>
+                <input type="text" class="mt-1 block w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-neutral-700">Email</label>
+                <input type="email" class="mt-1 block w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-neutral-700">Message</label>
+                <textarea rows="4" class="mt-1 block w-full px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Add form submission logic here
+      alert('Message sent successfully!');
+      form.reset();
+    });
+  </script>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
